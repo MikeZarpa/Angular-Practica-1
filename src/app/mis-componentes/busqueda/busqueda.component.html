@@ -1,0 +1,10 @@
+<div>
+    <label for="">
+        Nombre: {{contenidoBuscar}}
+        <input type="text" [(ngModel)]="contenidoBuscar">
+    </label>
+    <button (click)="OnBuscar()">Buscar</button>
+    <div *ngIf="mostrarResultado">
+        <app-producto [item]="producto" *ngFor="let producto of respuesta"></app-producto>
+    </div>
+</div>
